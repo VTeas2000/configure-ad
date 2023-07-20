@@ -123,5 +123,5 @@ As your admin in your DC VM, run "Windows PowerShell ISE" as an administrator.
 <br>By default, 100 randomly generated users will be created with the password of "Password1"
 <br>The users will be added to the "employees" organizational unit in "Active Directory Users and Computers"
 <img src="https://github.com/VTeas2000/configure-ad/assets/60052902/80548af6-2aa1-467e-904a-635958282de9" width="80%" alt="Employees"/>
-<br>You can log in to your client VM using any of the users and password your script created.
+<br>You can log in to your client VM using any of the users (following your domain name) and password created from your script.
 </p>
