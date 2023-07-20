@@ -103,3 +103,13 @@ In Microsoft Azure, access your client VM's <b>network interface</b> from the "N
 <br>For organizational purposes, create a "clients" organization unit and move your client from "Computers" to it.
 <img src="https://github.com/VTeas2000/configure-ad/assets/60052902/cf2bbb71-80f5-4eb9-9fbe-ad48bf173333" width="80%" alt="Organization"/>
 </p>
+
+<h3>Setup Remote Desktop for non-administrative users on the client</h3>
+<p>
+Connect to your client VM using your admin credentials for your DC VM.
+<img src="https://github.com/VTeas2000/configure-ad/assets/60052902/59f15329-7721-4743-b8da-fc02cdb55fb0" width="80%" alt="Client Connection"/>
+<br>Go to "Remote Desktop" under your client's system settings. Under user accounts, click "Select users that can remotely access this PC".
+<img src="https://github.com/VTeas2000/configure-ad/assets/60052902/5c2e73de-fb12-4a38-8682-e052109c218c" width="80%" alt="RD Settings"/>
+<br>Add "Domain Users" as remote desktop users.
+<img src="https://github.com/VTeas2000/configure-ad/assets/60052902/988c670b-56f2-492a-91fe-cfde1ddc08cf" width="80%" alt="Add Domain Users"/>
+</p>
