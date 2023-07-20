@@ -113,3 +113,15 @@ Connect to your client VM using your admin credentials for your DC VM.
 <br>Add "Domain Users" as remote desktop users.
 <img src="https://github.com/VTeas2000/configure-ad/assets/60052902/988c670b-56f2-492a-91fe-cfde1ddc08cf" width="80%" alt="Add Domain Users"/>
 </p>
+
+<h3>Create additional users and attempt to log into the client with one of the users</h3>
+<p>
+As your admin in your DC VM, run "Windows PowerShell ISE" as an administrator.
+<br>Create a new file and copy and paste this <a href="https://github.com/VTeas2000/configure-ad/blob/main/User_Generator_Script">user generator script</a> into it.
+<br>You can adjust the number of users the script will create and their shared password by editing the values of the variables. Run the script.
+<img src="https://github.com/VTeas2000/configure-ad/assets/60052902/67c994ae-dc94-41d8-9148-eea78cbde2a7" width="80%" alt="User Generator Script"/>
+<br>By default, 100 randomly generated users will be created with the password of "Password1"
+<br>The users will be added to the "employees" organizational unit in "Active Directory Users and Computers"
+<img src="https://github.com/VTeas2000/configure-ad/assets/60052902/80548af6-2aa1-467e-904a-635958282de9" width="80%" alt="Employees"/>
+<br>You can log in to your client VM using any of the users and password your script created.
+</p>
