@@ -79,6 +79,27 @@ On your DC VM, access "Active Directory Users and Computers" from the tools of y
 <img src="https://github.com/VTeas2000/configure-ad/assets/60052902/42191794-4cea-4258-9528-6294bc80f80e" height="80%" width="80%" alt="OU"/>
 <br>Create a user within the employees organizational unit. Choose any password, but ensure that it doesn't need to change after every login and never expires. Keep it in mind.
 <img src="https://github.com/VTeas2000/configure-ad/assets/60052902/eb8d0954-0d21-4c14-a559-e627cfc14647" height="80%" width="80%" alt="User Creation"/>
-<br>Select the properties of your new user and make it a member of the "Domain Admins" security group.
+<br>Select the properties of your new user and make it a member of the "Domain Admins" security group. This user will be your primary admin.
 <img src="https://github.com/VTeas2000/configure-ad/assets/60052902/78aa785f-2ec9-4b51-923e-d38d9eb45520" height="80%" width="80%" alt="Domain Admin"/>
+</p>
+
+<h3>Join the client to your domain</h3>
+<p>
+In Microsoft Azure, access your client VM's <b>network interface</b> from the "Networking" tab.
+<br>Add the DC's private IP as a DNS server. Restart your client VM.
+<img src="https://github.com/VTeas2000/configure-ad/assets/60052902/0c3824cc-826c-45c9-a00d-0877e0021a42" height="80%" width="80%" alt="DNS"/>
+<br>Reconnect to your client VM using Remote Desktop using your normal username. To check if the DC's private IP was added as a DNS server, open command prompt and input "ipconfig /all"
+<img src="https://github.com/VTeas2000/configure-ad/assets/60052902/eabb64be-0908-4ea6-8096-184bf2fa7815" width="80%" alt="DNS"/>
+<br>In your client's "About" settings, click "Rename this PC (advanced)"
+<img src="https://github.com/VTeas2000/configure-ad/assets/60052902/41cb39dc-6b81-432a-a83f-aec198b0ee74" width="80%" alt="Rename"/>
+<br>Click "Change..."<br>
+<img src="https://github.com/VTeas2000/configure-ad/assets/60052902/5497ad00-e7ae-48b1-b805-6f3dee344de7" width="80%" alt="Add Client to Domain"/>
+<br>Enter your domain name.<br>
+<img src="https://github.com/VTeas2000/configure-ad/assets/60052902/5238504d-e0e3-4832-aa0f-ce08a54b30e0" width="80%" alt="Domain Name"/>
+<br>Enter your admin's credentials for your DC's VM. Save and restart your client VM.
+<img src="https://github.com/VTeas2000/configure-ad/assets/60052902/0e47ac32-6986-4511-aa60-d406ff1bf2cb" width="80%" alt="DC Admin"/>
+<br>On your DC, verify that your client appears in the "Computers" section of "Active Directory Users and Computers".
+<img src="https://github.com/VTeas2000/configure-ad/assets/60052902/5e0538e6-a01d-4fb4-b3cc-d2d7b151cdb7" width="80%" alt="Client Verification"/>
+<br>For organizational purposes, create a "clients" organization unit and move your client from "Computers" to it.
+<img src="https://github.com/VTeas2000/configure-ad/assets/60052902/cf2bbb71-80f5-4eb9-9fbe-ad48bf173333" width="80%" alt="Organization"/>
 </p>
