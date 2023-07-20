@@ -71,3 +71,14 @@ On your DC VM, click "Add roles and features" from the dashboard of your server 
 <br>Close your DC VM. Reconnect to it using the same public IP and password but add your domain name before your previous username (must use "\" instead of "/").<br>
 <img src="https://github.com/VTeas2000/configure-ad/assets/60052902/0927bf30-ce69-4c85-8657-472fb29aec3f" height="80%" width="80%" alt="Reconnect"/>
 </p>
+
+<h3>Create an admin and normal user account in AD</h3>
+<p>
+On your DC VM, access "Active Directory Users and Computers" from the tools of your server manager.
+<br>In your domain, create "employees" and "admins" organizational units.
+<img src="https://github.com/VTeas2000/configure-ad/assets/60052902/42191794-4cea-4258-9528-6294bc80f80e" height="80%" width="80%" alt="OU"/>
+<br>Create a user within the employees organizational unit. Choose any password, but ensure that it doesn't need to change after every login and never expires. Keep it in mind.
+<img src="https://github.com/VTeas2000/configure-ad/assets/60052902/eb8d0954-0d21-4c14-a559-e627cfc14647" height="80%" width="80%" alt="User Creation"/>
+<br>Select the properties of your new user and make it a member of the "Domain Admins" security group.
+<img src="https://github.com/VTeas2000/configure-ad/assets/60052902/78aa785f-2ec9-4b51-923e-d38d9eb45520" height="80%" width="80%" alt="Domain Admin"/>
+</p>
