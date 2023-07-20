@@ -49,7 +49,7 @@ First, copy your client VM's public IP from Microsoft Azure.
 <br>Connect to your client VM using Remote Desktop with its public IP and credentials. Connect even if you get a certificate error.
 <br>Back in Microsoft Azure on your main device, copy your DC's private IP address.
 <img src="https://github.com/VTeas2000/configure-ad/assets/60052902/54d449ff-5ff1-4a25-83cf-6e975f7a8bc0" height="80%" width="80%" alt="DC IP"/>
-<br>On your client VM, open command prompt and perpetually ping the DC's private IP address using "ping <ip address> -t"
+<br>On your client VM, open command prompt and perpetually ping the DC's private IP address using "ping (ip address) -t"
 <img src="https://github.com/VTeas2000/configure-ad/assets/60052902/74652fd9-c014-43ed-bfb0-3e09f18301aa" height="80%" width="80%" alt="Ping DC"/>
 <br>Open another Remote Desktop connection using your DC's public IP and credentials.
 <br>In your DC VM, access "Windows Defender Firewall with Advanced Security". Enable "Core Networking Diagnostics - ICMP Echo Request (ICMPv4-In)" and "Core Networking Diagnostics - ICMP Echo Request (ICMPv4-In)"
